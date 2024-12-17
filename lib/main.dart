@@ -1,10 +1,10 @@
-import 'package:exam_projct/screen/LoginScreen.dart';
-import 'package:exam_projct/screen/ScreenHome.dart';
-import 'package:exam_projct/screen/Splash%20Screen.dart';
 import 'package:exam_projct/providers/LoginProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:provider/provider.dart';
+import 'view/screen/LoginScreen.dart';
+import 'view/screen/ScreenHome.dart';
+import 'view/screen/Splash Screen.dart';
 
 void main() {
   runApp(

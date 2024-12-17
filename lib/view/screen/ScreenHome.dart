@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../controller/HomeController.dart';
+import '../../controller/HomeController.dart';
+
 
 class ScreenHome extends StatelessWidget {
   ScreenHome({super.key});
