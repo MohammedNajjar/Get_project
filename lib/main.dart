@@ -10,7 +10,7 @@ void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (_) => LoginProvider()), // توفير LoginProvider
+        ChangeNotifierProvider(create: (_) => LoginProvider()),
       ],
       child: const MyApp(),
     ),
@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/splash',
       getPages: [
         GetPage(name: '/splash', page: () => const SplashScreen()),
-        GetPage(name: '/home', page: () => ScreenHome()), // الصفحة الرئيسية
-        GetPage(name: '/login', page: () => LoginScreen()), // صفحة تسجيل الدخول
+        GetPage(name: '/home', page: () => ScreenHome()),
+        GetPage(name: '/login', page: () => LoginScreen()),
       ],
     );
   }
