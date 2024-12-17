@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-class  SplashScreen extends StatelessWidget {
-  const  SplashScreen({super.key});
+
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,6 @@ class  SplashScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // النص الأساسي
               Text(
                 'LOGO',
                 style: TextStyle(
@@ -34,7 +34,6 @@ class  SplashScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              // النص الإضافي
               Text(
                 'Add Student',
                 style: TextStyle(

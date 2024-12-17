@@ -1,15 +1,12 @@
 import 'package:get/get.dart';
+import '../model/student.dart';
 
 class HomeController extends GetxController {
-  var students = <Map<String, String>>[].obs;
+  var students = <Student>[].obs;
+
   void addStudent(String name, String id, String avg) {
-    students.add(
-        {
-          "name": name,
-          "id": id,
-          "avg": avg
-        }
-    );
+    Student newStudent = Student(name: name, id: id, avg: avg);
+    students.add(newStudent);
   }
 
   void deleteStudent(int index) {

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../../controller/HomeController.dart';
 
-
 class ScreenHome extends StatelessWidget {
   ScreenHome({super.key});
 
@@ -67,7 +66,7 @@ class ScreenHome extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          'name: ${student['name']}',
+                          'name: ${student.name}',
                           style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
@@ -75,9 +74,8 @@ class ScreenHome extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       Text(
-                        'Avg is: ${student['avg']}',
+                        'Avg is: ${student.avg}',
                         style: const TextStyle(
                           color: Color(0xFF007F6A),
                           fontWeight: FontWeight.bold,
@@ -87,14 +85,14 @@ class ScreenHome extends StatelessWidget {
                     ],
                   ),
                   subtitle: Text(
-                    'Id: ${student['id']}',
+                    'Id: ${student.id}',
                     style: const TextStyle(
                       color: Color(0xFFEBA41D),
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                   trailing: IconButton(
-                    icon:  const Icon(
+                    icon: const Icon(
                       Icons.cancel,
                       color: Color(0xFFD4D100),
                     ),
@@ -177,7 +175,6 @@ class ScreenHome extends StatelessWidget {
       },
     );
   }
-
 
   Widget _buildLargeTextField(TextEditingController controller, String label) {
     return TextField(
