@@ -93,9 +93,9 @@ class ScreenHome extends StatelessWidget {
                     ),
                   ),
                   trailing: IconButton(
-                    icon: const Icon(
-                      Icons.delete,
-                      color: Colors.redAccent,
+                    icon:  const Icon(
+                      Icons.cancel,
+                      color: Color(0xFFD4D100),
                     ),
                     onPressed: () {
                       controller.deleteStudent(index);
