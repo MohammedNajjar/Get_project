@@ -6,7 +6,7 @@ class  SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 3), () {
-      Get.offNamed('/home');
+      Get.offNamed('/login');
     });
     return Scaffold(
       body: Container(

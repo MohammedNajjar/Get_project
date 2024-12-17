@@ -1,17 +1,25 @@
-import 'package:exam_projct/ScreenHome.dart';
+import 'package:exam_projct/screen/LoginScreen.dart';
+import 'package:exam_projct/screen/ScreenHome.dart';
+import 'package:exam_projct/screen/Splash%20Screen.dart';
+import 'package:exam_projct/providers/LoginProvider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import 'Splash Screen.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => LoginProvider()), // توفير LoginProvider
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
@@ -20,7 +28,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/splash',
       getPages: [
         GetPage(name: '/splash', page: () => const SplashScreen()),
-        GetPage(name: '/home', page: () => ScreenHome()), // صفحة القائمة الرئيسية
+        GetPage(name: '/home', page: () => ScreenHome()), // الصفحة الرئيسية
+        GetPage(name: '/login', page: () => LoginScreen()), // صفحة تسجيل الدخول
       ],
     );
   }
